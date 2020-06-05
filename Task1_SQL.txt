@@ -1,0 +1,32 @@
+1. ADD a primary key to the is fields in the pets and people table.
+ 
+   ALTER table pets ADD primary key(ID);
+ 
+   ALTER table people ADD primary key(ID);
+
+
+2. ADD a foreign key to the owner_id field in the pets table  referencing the id
+  field in the people table.
+
+   ALTER table pets ADD constraint FK_petspeople Foreign key(owner_id) References people(ID);
+
+
+3. Add a column named email to the people table.
+
+   ALTER table people ADD column email varchar(30);
+
+
+4. Add a unique constraint to the email column in the people table.
+
+   ALTER table people ADD contraint email_id UNIQUE(email);
+
+
+5. Rename the name column in the pets table to the 'first_name'.
+
+   ALTER table pets RENAME column name firstname;
+                  or
+   ALTER table pets change name firtname varchar(20);
+
+   
+
+   
